@@ -12,10 +12,6 @@ input {
   max-width: 20rem;
 }
 
-.input-group {
-  justify-content: center;
-}
-
 .card {
   width: 10rem;
   height: 8rem;
@@ -29,7 +25,7 @@ input {
 
 nav {
   height: 12rem;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
 }
 #title {
   position: absolute;
@@ -37,7 +33,20 @@ nav {
   transform: translatex(-50%);
 }
 
-a {
+.card a {
   color: white !important;
   text-decoration: none !important;
+}
+
+.page-link {
+  background-color: rgb(33, 37, 41) !important;
+  color: white !important;
+  border-color: white !important;
+}
+
+.disabled * {
+  color: rgb(33, 37, 41);
+}
+
+.navbar {
 }

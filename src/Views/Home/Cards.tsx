@@ -4,43 +4,20 @@ import { Species } from "./Species";
 import { People, Person } from "./types";
 
 export const Cards = ({ people }: { people: People }) => {
-  //   const pageItems = [];
-  //       <Pagination.Item
-  //         onClick={(e: MouseEvent<HTMLElement>) => {
-  //           const element = e.target as HTMLElement;
-  //           const clickedPageNumber = element.textContent;
-
-  //           if (
-  //             clickedPageNumber === null ||
-  //             clickedPageNumber.includes("current")
-  //           )
-  //             return;
-
-  //           setActivePage(parseInt(clickedPageNumber));
-  //         }}
-  //         key={number}
-  //         active={number === activePage}
-  //       >
-  //         {number}
-  //       </Pagination.Item>
-  // }
+  //
   const cleanName = (name: string) => {
     return name.replace(" ", "-").toLowerCase();
   };
 
   return (
     <>
-      {/* <Pagination size="sm">{pageItems}</Pagination> */}
       {Object.entries(people).map(([speciesUrl, persons]) => {
         return (
-          <Container className="vw-100">
+          <Container key={speciesUrl} className=" mx-5">
             <h3>
               <Species speciesUrl={speciesUrl} />
             </h3>
-            <Row
-              key={speciesUrl}
-              className="g-2 mb-5 row-cols-auto text-center"
-            >
+            <Row className="g-2 mb-5 row-cols-auto text-center">
               {persons.map((person: Person) => {
                 return (
                   <Col key={person.name}>
