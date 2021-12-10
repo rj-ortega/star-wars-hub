@@ -1,4 +1,4 @@
-import { ChangeEvent, useState, KeyboardEvent, MouseEvent } from "react";
+import { ChangeEvent, useState, KeyboardEvent } from "react";
 import {
   FormControl,
   InputGroup,
@@ -6,14 +6,13 @@ import {
   Container,
   Row,
   Col,
-  Navbar,
 } from "react-bootstrap";
 import "./style.scss";
 import axios from "axios";
 import { Person, People } from "./types";
 import { Cards } from "./Cards";
-import DarthVader from "../../assets/darthVader.jpg";
 import { PaginatePeople } from "./Paginate";
+import { NavBar } from "../Shared/NavBar";
 
 const humanUrl = "https://swapi.dev/api/species/1/";
 
@@ -68,25 +67,11 @@ export const Home = () => {
 
   return (
     <>
-      <Navbar fixed="top" className="p-0">
-        <Navbar.Brand href="#home">
-          <img
-            id="darth-vader"
-            className="d-none d-lg-block"
-            src={DarthVader}
-            alt="darth vader image"
-          />
-        </Navbar.Brand>
-        <Navbar.Text id="title" className="display-6 navbar-center">
-          Welcome to Star Wars Hub
-        </Navbar.Text>
-        <div></div>
-      </Navbar>
+      <NavBar></NavBar>
       <Container className="min-vw-100">
         <Row>
           <Col>
-            <h1 className="display-5"></h1>
-            <h4 className="text-center">
+            <h4 className="text-center mt-4">
               Search for people in the Star Wars Universe
             </h4>
           </Col>
@@ -108,11 +93,21 @@ export const Home = () => {
           <Button onClick={() => search()} variant="outline-light">
             Search
           </Button>
+        </InputGroup>
+        <Container fluid className="d-flex justify-content-center my-4">
+          <Button
+            onClick={() => search()}
+            variant="outline-light"
+            className="me-3"
+          >
+            Browse Characters
+          </Button>
           <Button onClick={reset} variant="outline-light">
             Reset
           </Button>
-        </InputGroup>
+        </Container>
       </Container>
+
       {Object.keys(people).length > 1 ? (
         <PaginatePeople
           activePage={activePage}

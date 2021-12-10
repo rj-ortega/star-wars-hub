@@ -26,7 +26,10 @@ export const Cards = ({ people }: { people: People }) => {
                         <Card.Title>{person.name}</Card.Title>
                       </Card.Body>
                       <Card.Footer>
-                        <Link to={`/details/${cleanName(person.name)}`}>
+                        <Link
+                          to={`/details/${cleanName(person.name)}`}
+                          state={person.url}
+                        >
                           More details
                         </Link>
                       </Card.Footer>
