@@ -43,8 +43,8 @@ export const Movies = ({ movies }: { movies: string[] }) => {
   const loadCards = () => {
     return movieNames.map((movie: string) => {
       return (
-        <Col key={movie}>
-          <Card className="movie mb-3">
+        <Col key={movie} className="mb-3">
+          <Card className="movie">
             <img
               src={movieLookup[movie]}
               className="img-fluid rounded-start"
