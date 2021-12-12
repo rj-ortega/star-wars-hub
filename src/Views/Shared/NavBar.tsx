@@ -7,7 +7,7 @@ export const NavBar = () => {
       <Navbar.Brand href="/">
         <img
           id="darth-vader"
-          className="d-none d-lg-block"
+          className="d-none d-sm-block"
           src={DarthVader}
           alt="darth vader"
         />

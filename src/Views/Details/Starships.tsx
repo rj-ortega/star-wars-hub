@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, ListGroup } from "react-bootstrap";
 import axios from "axios";
 import { NoDataCard } from "./NoDataCard";
 
@@ -22,24 +22,20 @@ export const Starships = ({ starships }: { starships: string[] }) => {
     };
     getStarshipNames(starships);
   }, []);
-  console.log(starshipNames);
   const loadCards = () => {
-    console.log(starshipNames);
     return starshipNames.map((starship: string) => {
-      return (
-        <Card key={starship}>
-          <Card.Body>{starship}</Card.Body>
-        </Card>
-      );
+      return <ListGroup.Item key={starship}>{starship}</ListGroup.Item>;
     });
   };
   return (
-    <>
-      {starshipNames.length ? (
-        loadCards()
-      ) : (
-        <NoDataCard dataProperty="Starships" />
-      )}
-    </>
+    <Card>
+      <ListGroup>
+        {starshipNames.length ? (
+          loadCards()
+        ) : (
+          <ListGroup.Item>No Starships</ListGroup.Item>
+        )}
+      </ListGroup>
+    </Card>
   );
 };

@@ -19,12 +19,12 @@ input {
 }
 
 #darth-vader {
-  width: 12rem;
+  width: 20vh;
   display: inline;
 }
 
 nav {
-  height: 12rem;
+  height: 20vh;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
 }
 
@@ -52,4 +52,14 @@ nav {
 
 h3 {
   margin: 1rem 0 !important;
+}
+
+.movie {
+  width: 15rem;
+  max-width: 40vw;
+  text-align: center;
+}
+
+.bottom-container {
+  margin-bottom: 5rem;
 }
