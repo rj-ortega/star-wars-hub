@@ -31,6 +31,8 @@
 
 - Created by Paul Hallett Maintained by Juriy Bura ©2021
 
+### Live deploy at [Star-Wars-Hub](https://star-wars-hub.surge.sh/)
+
 ### To run:
 
 - To install do `yarn install` or `npm install`
