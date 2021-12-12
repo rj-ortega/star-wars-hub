@@ -1,9 +1,11 @@
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 
 export const NoDataCard = ({ dataProperty }: { dataProperty: string }) => {
   return (
-    <Card>
-      <Card.Body>No {dataProperty}</Card.Body>
-    </Card>
+    <Container>
+      <Card>
+        <Card.Body>No {dataProperty}</Card.Body>
+      </Card>
+    </Container>
   );
 };
