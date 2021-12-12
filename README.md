@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+## Welcome to Star-Wars-Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- App built using technologies:
+  - React with Typescript.
+  - React-bootstrap and bootstrap for styling.
+  - React-router for routing.
 
-## Available Scripts
+### Demo of features and functionality:
 
-In the project directory, you can run:
+![Demo Gif](/src/assets/star-wars-hub-demo.gif)
 
-### `yarn start`
+### Written features and functionality:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Hitting the `Browse Characters` will hit the api and load the first page which will populate 10 characters
+- You can use the pagination to search the second page of the API and load another set of 10 characters.
+- Hitting the `Reset` button will clear the people list.
+- Searching will return results.
+- For any of the characters you can go into the Details page.
+- This will take you to another page that will contain more details about that character.
+- The Movie posters have been added to the `src/assets` folder since the API doesn't provide images to use.
+- Main page will provide a search bar for looking up characters.
+- The whole page is responsive depending on the screen size.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Structure of app
 
-### `yarn test`
+- Two pages
+  - Main page that displays characters
+  - Details page that provides detailed information
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### API used [SWAPI](https://swapi.dev/)
 
-### `yarn build`
+- Created by Paul Hallett Maintained by Juriy Bura ©2021
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### To run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- To install do `yarn install` or `npm install`
+- To run locally do `yarn start` or `npm start`
+  - Runs the app in the development mode.\
+  - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
