@@ -67,7 +67,7 @@ export const Home = () => {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar />
       <Container className="min-vw-100">
         <Row>
           <Col>

@@ -40,7 +40,7 @@ export const Details = () => {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar />
       {person ? (
         <Container className="min-vw-100 justify-content-center">
           <Container>
